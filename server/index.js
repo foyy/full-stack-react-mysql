@@ -7,9 +7,14 @@ var app = express();
 
 app.use(express.static(__dirname + '/../react-client/dist'));
 
+app.get('/',function(req,res){
+  console.log('yo bros')
+})
+
 app.get('/items', function (req, res) {
   items.selectAll(function(err, data) {
     if(err) {
+      console.log('There was an error in the request')
       res.sendStatus(500);
     } else {
       res.json(data);
