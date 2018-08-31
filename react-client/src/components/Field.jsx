@@ -20,7 +20,6 @@ class Field extends React.Component {
         this.setState({
             inputValue: evt.target.value
         });
-        console.log('evt IS: ',evt.target.value)
     };
         
     
